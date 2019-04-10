@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="/Content/bootstrap.css" rel="stylesheet">
+    <link href="/Content/Site.css" rel="stylesheet" type="text/css" />
+
+    <script src="/Scripts/jquery-3.3.1.js"></script>
+    <script src="/Scripts/modernizr-2.8.3.js"></script>
+    <script src="/Scripts/jquery.validate.js"></script>
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/CatsPageScripts/Cats.js"></script>
+</head>
+<body>
+    <div class="container body-content">
+
+        <h1>CAT Details Table</h1>
+        <div>
+            <span class="table-add float-right mb-3 mr-2">
+                <button id="catAddBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#catDetModal" onclick="resetModalForm()">Add New Cat</button>
+            </span>
+        </div>
+
+        <!--Bootstrap Table using .table-bordered class-->
+        <div id="loadingDiv" style="display:none">
+            <h3>Loading data please wait...</h3>
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        </br>
+        <div>
+            <!--<table class="table table-bordered" id="catTable">-->
+            <table class="table table-striped table-responsive-md btn-table" id="catTable">
+                <thead>
+                    <tr>
+                        <th>CatID </th>
+                        <th>Cat Name</th>
+                        <th>Cat DOB</th>
+                        <th>Cat Gender</th>
+                        <th>Cat Breed</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+
+        <hr />
+        <footer>
+            <!--<p>&copy; @DateTime.Now.Year - CATS Application</p>-->
+            <p>
+                &copy;
+                <script type="text/JavaScript">var theDate = new Date(); document.write(theDate.getFullYear())</script> - CATS Application
+            </p>
+        </footer>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="catDetModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Deatils of Cat: </h4>
+                </div>
+
+
+                <div class="modal-body">
+                    <input type="hidden" id="catid" />
+                    <form id="inForm">
+                        <div class="form-group">
+                            <label for="catname">Cat Name</label>
+                            <!--<input type="text" id="choose" name="i_like" required minlength="6" maxlength="6">-->
+                            <input type="text" id="catname"
+                                   class="form-control" required minlength="2" maxlength="10" />
+                        </div>
+                    </form>
+
+                        <div class="form-group">
+                            <label for="catdob">
+                                Cat DOB
+                            </label>
+                            <input type="date" id="catdob"
+                                   class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="catgender">Cat Gender</label>
+                            <!--<input type="text" id="catgender11"
+                                   class="form-control" maxlength="1" pattern="[a-zA-Z]*" />-->
+                            <select id="catgender"
+                                   class="form-control">
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="catbreed">Cat Breed</label>
+                            <input type="text" id="catbreed"
+                                   class="form-control" maxlength="10" />
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button id="updateButton"
+                                        class="btn btn-primary"
+                                        onclick="modalUpdateClick();">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    <!--</form>-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

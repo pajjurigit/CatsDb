@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Cats xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Cat>
+    <CatId>1</CatId>
+    <CatName>Silly</CatName>
+    <CatAge>0</CatAge>
+    <CatGender>70</CatGender>
+    <CatDob>2017-12-11</CatDob>
+    <CatBreed>breed</CatBreed>
+  </Cat>
+  <Cat>
+    <CatId>3</CatId>
+    <CatName>Robbie</CatName>
+    <CatAge>0</CatAge>
+    <CatGender>77</CatGender>
+    <CatDob>2017-09-19</CatDob>
+    <CatBreed>breed32</CatBreed>
+  </Cat>
+  <Cat>
+    <CatId>6</CatId>
+    <CatName>Sammy</CatName>
+    <CatAge>0</CatAge>
+    <CatGender>77</CatGender>
+    <CatDob>2016-03-25</CatDob>
+    <CatBreed>22</CatBreed>
+  </Cat>
+  <Cat>
+    <CatId>7</CatId>
+    <CatName>Tammy</CatName>
+    <CatAge>0</CatAge>
+    <CatGender>70</CatGender>
+    <CatDob>2019-02-02</CatDob>
+    <CatBreed>fem1</CatBreed>
+  </Cat>
+  <Cat>
+    <CatId>8</CatId>
+    <CatName>Tutsie</CatName>
+    <CatAge>0</CatAge>
+    <CatGender>70</CatGender>
+    <CatDob>2015-02-02</CatDob>
+    <CatBreed>tut breed</CatBreed>
+  </Cat>
+</Cats>
